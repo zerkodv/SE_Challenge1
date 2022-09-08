@@ -24,6 +24,21 @@ public class ItemController {
     public Item getItemsList(@PathVariable String id){
         return itemDAO.getItem(id);
     }
+    @PostMapping(consumes = "application/json", produces = "application/json")
+    public void addItem(
+
+            @RequestBody Item item)
+            throws Exception
+    {
+        //Generate resource id
+        Integer id = itemDAO.getAllItems().getItemList().size() + 1;
+        item.setId(String.valueOf(id));
+
+        //add resource
+        itemDAO.addItem(item);
+
+
+    }
 
 
 
