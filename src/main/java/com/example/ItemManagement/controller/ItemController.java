@@ -39,6 +39,15 @@ public class ItemController {
 
 
     }
+    @DeleteMapping(path = "/{id}")
+    public void deleteItem(
+            @PathVariable("id") String id){
+        itemDAO.deleteItem(id);
+
+
+
+
+    }
 
 
 
