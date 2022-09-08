@@ -48,6 +48,15 @@ public class ItemController {
 
 
     }
+    @PutMapping(path = "/{id}")
+    public void updateItem(@PathVariable("id") String id,
+                           @RequestBody Item item)
+            throws Exception{
+        itemDAO.updateItem(id, item);
+
+
+
+    }
 
 
 
