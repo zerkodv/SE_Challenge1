@@ -11,7 +11,7 @@ import java.util.List;
 @SpringBootApplication
 
 public class ItemManagementApplication {
-
+	//main app
 	public static void main(String[] args) {
 
 		SpringApplication.run(ItemManagementApplication.class, args);
