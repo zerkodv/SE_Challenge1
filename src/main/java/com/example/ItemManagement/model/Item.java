@@ -5,14 +5,16 @@ public class Item {
 
     }
     private String id;
-    private String name;
+    private String title;
     private String desc;
+    private String imagePath;
     private double price;
 
-    public Item(String id, String name, String desc, double price) {
+    public Item(String id, String title, String desc, String imagePath, double price) {
         this.id = id;
-        this.name = name;
+        this.title = title;
         this.desc = desc;
+        this.imagePath = imagePath;
         this.price = price;
     }
 
@@ -24,12 +26,12 @@ public class Item {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDesc() {
@@ -40,19 +42,29 @@ public class Item {
         this.desc = desc;
     }
 
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
     public double getPrice() {
         return price;
     }
+
     public void setPrice(double price) {
         this.price = price;
     }
 
     @Override
     public String toString() {
-        return "item{" +
+        return "Item{" +
                 "id='" + id + '\'' +
-                ", name='" + name + '\'' +
+                ", title='" + title + '\'' +
                 ", desc='" + desc + '\'' +
+                ", imagePath='" + imagePath + '\'' +
                 ", price=" + price +
                 '}';
     }
